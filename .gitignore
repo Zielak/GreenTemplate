@@ -1,0 +1,4 @@
+bin/*
+*.sublime-*
+*.xcf
+devlog/*

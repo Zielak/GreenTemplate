@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- <link rel="icon" href="favicon.png"/> -->
+    <meta charset="utf-8">
+
+    <style>
+/*
+ *  Simple Grid
+ */
+.row{
+  clear: both;
+  overflow: hidden;
+}
+.row .col{
+  float: left;
+  padding-right:10px;
+  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.row.nogutter .col{
+  padding-right: 0;
+}
+.col2 .span_1{width: 50%;}
+.col2 .span_2{width: 100%;}
+
+.col3 .span_1{width: 33.33%;}
+.col3 .span_2{width: 66.66%;}
+.col3 .span_3{width: 100%;}
+
+.col4 .span_1{width: 25%;}
+.col4 .span_2{width: 50%;}
+.col4 .span_3{width: 75%;}
+.col4 .span_4{width: 100%;}
+
+.col5 .span_1{width: 20%;}
+.col5 .span_2{width: 40%;}
+.col5 .span_3{width: 60%;}
+.col5 .span_4{width: 80%;}
+.col5 .span_5{width: 100%;}
+
+.col6 .span_1{width: 16.65%;}
+.col6 .span_2{width: 33.32%;}
+.col6 .span_3{width: 50%;}
+.col6 .span_4{width: 66.65%;}
+.col6 .span_5{width: 83.32%;}
+.col6 .span_6{width: 100%;}
+
+.col7 .span_1{width: 14.28%;}
+.col7 .span_2{width: 28.57%;}
+.col7 .span_3{width: 42.85%;}
+.col7 .span_4{width: 57.14%;}
+.col7 .span_5{width: 71.42%;}
+.col7 .span_6{width: 85.71%;}
+.col7 .span_7{width: 100%;}
+
+#window1 { margin: 0 auto; padding: 0; }
+
+body{
+  font-size: 12px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background: #EEE;
+  color: #888;
+}
+p{
+    margin: 1em 0 1.5em;
+}
+a{
+  color: #07B900;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline
+}
+
+footer{
+  text-align: center;
+}
+
+</style>
+
+{{#each project.app.web.libs~}}
+<script type="text/javascript" src="{{this}}"></script>
+{{/each}}
+
+</head>
+
+<body>
+    <script type="text/javascript" src="./{{project.app.name}}{{#if project.app.web.min}}.min{{/if}}.js"></script>
+
+    <footer>
+      <p><a href="https://darekgreenly.com/" target="_self">Darek Greenly</a></p>
+    </footer>
+</body>
+
+</html>
