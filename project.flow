@@ -14,7 +14,7 @@
   project : {
     name : 'empty',
     version : '1.0.0',
-    author : 'Darek Greenlt',
+    author : 'Darek Greenly',
 
     app : {
       name : 'luxe_empty',
@@ -28,7 +28,8 @@
     },
 
     files : {
-      assets : 'assets/'
+      assets : 'assets/',
+      index : { path:'custom_index.html => index.html', template:'project', not_listed:true }
     }
 
   }
